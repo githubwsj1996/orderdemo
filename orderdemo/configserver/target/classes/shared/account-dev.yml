@@ -1,0 +1,20 @@
+server:
+  port: 8010
+spring:
+  application:
+    name: account
+  datasource:
+    url: jdbc:mysql://localhost:3306/orderingsystem?useUnicode=true&characterUncoding=utf-8
+    name: orderingsystem
+    username: root
+    password: wsj666
+    driver-class-name: com.mysql.cj.jdbc.Driver
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+mybatis:
+  mapper-locations: classpath:/mapping/*.xml
+  type-aliases-package: com.sj.entity
